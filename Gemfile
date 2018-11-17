@@ -20,6 +20,7 @@ gem "grape-swagger-rails"
 gem "haml"
 gem 'mini_magick', '~> 4.8'
 gem 'puma', '~> 3.11'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'redis', '~> 4.0'
 gem "sidekiq"
 
@@ -33,7 +34,7 @@ group :development do
 end
 
 group :development, :test do
-  
+  gem 'rspec-rails', '~> 3.8'
 end
 
 

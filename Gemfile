@@ -18,6 +18,7 @@ gem "grape-active_model_serializers"
 gem "grape-swagger"
 gem "grape-swagger-rails"
 gem "haml"
+gem "jwt"
 gem 'mini_magick', '~> 4.8'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', :require => 'rack/cors'

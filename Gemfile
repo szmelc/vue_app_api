@@ -13,7 +13,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'capistrano-rails', group: :development
 gem "devise"
-gem 'execjs', '~> 2.7'
 gem "grape"
 gem "grape-active_model_serializers"
 gem "grape-swagger"
@@ -25,6 +24,7 @@ gem 'puma', '~> 3.11'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'redis', '~> 4.0'
 gem "sidekiq"
+gem "therubyracer"
 
 group :development do
   gem "bullet"

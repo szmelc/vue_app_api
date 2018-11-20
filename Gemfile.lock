@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 7bd5b72992a72219eb60457dd8efa58ed7f3abaf
+  branch: master
+  specs:
+    faker (1.9.1)
+      i18n (>= 0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -364,6 +372,7 @@ DEPENDENCIES
   capistrano-rails
   devise
   factory_bot_rails
+  faker!
   grape
   grape-active_model_serializers
   grape-swagger

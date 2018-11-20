@@ -32,16 +32,19 @@ group :development do
   gem 'lol_dba'
   gem "pry"
   gem 'pry-rails'
+  gem 'reek', '~> 5.2'
   gem "rubocop"
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.8'
   gem "rspec_junit_formatter"
+  gem 'simplecov', require: false, group: :test
 end
 
 group :test do

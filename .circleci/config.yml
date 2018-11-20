@@ -1,0 +1,13 @@
+---
+version: 2
+jobs:
+    build:
+        working_directory: ~/vue_app
+        docker:
+            - image: circleci/ruby:2.4.1
+            environment:
+                RAILS_ENV: test
+    steps:
+        - checkout
+      - run: cp .sample.env .env
+      - run: bundle exec rake

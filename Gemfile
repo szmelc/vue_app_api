@@ -13,6 +13,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'capistrano-rails', group: :development
 gem "devise"
+gem 'execjs', '~> 2.7'
 gem "grape"
 gem "grape-active_model_serializers"
 gem "grape-swagger"

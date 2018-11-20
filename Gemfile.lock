@@ -351,6 +351,7 @@ DEPENDENCIES
   bullet
   capistrano-rails
   devise
+  execjs (~> 2.7)
   grape
   grape-active_model_serializers
   grape-swagger

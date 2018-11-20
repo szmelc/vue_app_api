@@ -24,6 +24,7 @@ gem 'puma', '~> 3.11'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'redis', '~> 4.0'
 gem "sidekiq"
+gem "therubyracer"
 
 group :development do
   gem "bullet"
@@ -38,6 +39,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
+  gem "rspec_junit_formatter"
 end
 
 group :test do

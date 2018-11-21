@@ -42,7 +42,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'factory_bot_rails'
-  gem 'rspec_api_documentation'
   gem 'rspec-rails', '~> 3.8'
   gem "rspec_junit_formatter"
   gem 'simplecov', require: false, group: :test

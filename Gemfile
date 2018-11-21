@@ -20,6 +20,8 @@ gem "grape-swagger-rails"
 gem "haml"
 gem "jwt"
 gem 'mini_magick', '~> 4.8'
+gem "pry"
+gem 'pry-rails'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'redis', '~> 4.0'
@@ -30,8 +32,6 @@ group :development do
   gem "bullet"
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'lol_dba'
-  gem "pry"
-  gem 'pry-rails'
   gem 'reek', '~> 5.2'
   gem "rubocop"
   gem 'spring'

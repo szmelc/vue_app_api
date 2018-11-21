@@ -10,7 +10,7 @@ module TokenAuthenticatable
 
     before_action :authenticate_user
 
-    rescue_from NotAuthorizedException, with: -> { render json: { error: 'Not Authorized' }, status: :unauthorized }
+    rescue_from NotAuthorizedException, with: -> { render json: { error: 'Not authorized' }, status: :unauthorized }
   end
 
   private

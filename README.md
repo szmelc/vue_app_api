@@ -1,5 +1,7 @@
 # README
 
+[![CircleCI](https://circleci.com/gh/szmelc/vue_app_api/tree/master.svg?style=svg)](https://circleci.com/gh/szmelc/vue_app_api/tree/master)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

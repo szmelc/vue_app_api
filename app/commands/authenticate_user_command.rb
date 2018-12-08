@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticateUserCommand < BaseCommand
   private
 
@@ -13,23 +15,23 @@ class AuthenticateUserCommand < BaseCommand
   end
 
   def password_valid?
-    user && user.authenticate(password)
+    user&.authenticate(password)
   end
 
   def payload
     if password_valid?
       @result = JwtService.encode(contents)
     else
-      errors.add(:base, I18n.t('authenticate_user_command.invalid_credentials'))
+      errors.add(:base, I18n.t("authenticate_user_command.invalid_credentials"))
     end
   end
 
   def contents
     {
       user_id: user.id,
-      exp: 24.hours.from_now.to_i,
-      admin: user.admin,
-      email: user.email
+      exp:     24.hours.from_now.to_i,
+      admin:   user.admin,
+      email:   user.email
     }
   end
 end

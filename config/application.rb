@@ -1,4 +1,6 @@
-require_relative 'boot'
+# frozen_string_literal: true
+
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -38,6 +40,6 @@ module ExampleApp
     config.middleware.use Rack::MethodOverride
     config.middleware.use ActionDispatch::Flash
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore    
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end

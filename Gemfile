@@ -13,11 +13,12 @@ gem "active_admin_theme"
 gem "activeadmin"
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
-gem 'carrierwave', '~> 1.0'
 gem "capistrano-rails", group: :development
+gem "carrierwave", "~> 1.0"
 gem "devise"
+gem "fog-aws"
 gem "grape"
-gem "grape-active_model_serializers"
+gem "grape-active_model_serializers", "~> 1.3.2"
 gem "grape-swagger"
 gem "grape-swagger-rails"
 gem "haml"

@@ -7,6 +7,7 @@ module API
         resource :users do
           namespace :me do
             mount Users::Me::Show
+            mount Users::Me::Update
           end
         end
       end

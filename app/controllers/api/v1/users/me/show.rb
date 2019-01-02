@@ -5,7 +5,7 @@ module API
     module Users
       module Me
         class Show < Base
-          desc "Return User for current token"
+          desc "Return current user"
           get do
             authorize!
             current_user

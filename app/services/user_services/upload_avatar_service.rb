@@ -8,7 +8,14 @@ module UserServices
     end
 
     def call
-      binding.pry
+      upload_avatar
+    end
+
+    private
+
+    def upload_avatar
+      user.avatar = avatar
+      user.save
     end
   end
 end

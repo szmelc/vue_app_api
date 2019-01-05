@@ -5,12 +5,12 @@ module API
     module Users
       module Me
         class Update < Base
-          namespace :upload_avatar do
+          namespace :update do
             desc "Update current user for current token"
             post do
               authorize!
-              avatar = params["image"]
-              UserServices::UploadAvatarService.new(current_user, avatar).call
+              result = UserServices::Update.new(current_user, params).call
+              render result.data
             end
           end
         end

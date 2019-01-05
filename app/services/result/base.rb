@@ -4,7 +4,7 @@ module Result
   class Base < ApplicationService
     attr_reader :data, :message
 
-    def initiailze(message, data)
+    def initialize(message, data)
       @message = message
       @data = data
     end
@@ -21,5 +21,5 @@ module Result
     def flash
       raise NotImplementedError
     end
-  end  
+  end
 end

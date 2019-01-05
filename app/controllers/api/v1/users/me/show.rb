@@ -6,7 +6,7 @@ module API
       module Me
         class Show < Base
           desc "Return current user"
-          get do
+          get "/", serializer: UserSerializer do
             authorize!
             current_user
           end

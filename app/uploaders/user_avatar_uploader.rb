@@ -6,8 +6,7 @@ class UserAvatarUploader < BaseUploader
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :fog
-  # storage :fog
+  storage :fog
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

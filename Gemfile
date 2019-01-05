@@ -8,9 +8,6 @@ ruby "2.5.1"
 gem "pg", ">= 0.18", "< 2.0"
 gem "rails", "~> 5.2.1"
 
-gem "active_admin_datetimepicker"
-gem "active_admin_theme"
-gem "activeadmin"
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "capistrano-rails", group: :development

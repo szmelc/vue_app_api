@@ -1,11 +1,15 @@
 CarrierWave.configure do |config|
+  if Rails.env.test? or Rails.env.development?
+    config.storage = :file
+    config.enable_processing = false
+  end
   config.fog_provider = "fog/aws" # required
   config.fog_credentials = {
     provider:              "AWS", # required
     aws_access_key_id:     Rails.application.secrets.aws_access_key_id, # required unless using use_iam_profile
     aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required unless using use_iam_profile
     region:                Rails.application.secrets.aws_region, # optional, defaults to 'us-east-1'
-    host:                  "s3.amazonaws.com", # optional, defaults to nil
+    host:                  "s3-#{Rails.application.secrets.aws_region}.amazonaws.com"
   }
   config.fog_directory  = Rails.application.secrets.aws_bucket # required
   config.fog_public     = false                                                 # optional, defaults to true

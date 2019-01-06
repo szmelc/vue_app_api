@@ -13,6 +13,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "capistrano-rails", group: :development
 gem "carrierwave", "~> 1.0"
 gem "devise"
+gem "figaro"
 gem "fog-aws"
 gem "grape"
 gem "grape-active_model_serializers", "~> 1.3.2"

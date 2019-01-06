@@ -6,12 +6,12 @@ CarrierWave.configure do |config|
   config.fog_provider = "fog/aws" # required
   config.fog_credentials = {
     provider:              "AWS", # required
-    aws_access_key_id:     Rails.application.secrets.aws_access_key_id, # required unless using use_iam_profile
-    aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required unless using use_iam_profile
-    region:                Rails.application.secrets.aws_region, # optional, defaults to 'us-east-1'
-    host:                  "s3-#{Rails.application.secrets.aws_region}.amazonaws.com"
+    aws_access_key_id:     ENV["aws_access_key_id"], # required unless using use_iam_profile
+    aws_secret_access_key: ENV["aws_secret_access_key"], # required unless using use_iam_profile
+    region:                ENV["aws_region"], # optional, defaults to 'us-east-1'
+    host:                  "s3-#{ENV["aws_region"]}.amazonaws.com"
   }
-  config.fog_directory  = Rails.application.secrets.aws_bucket # required
+  config.fog_directory  = ENV["aws_bucket"] # required
   config.fog_public     = false                                                 # optional, defaults to true
   config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } # optional, defaults to {}
 end

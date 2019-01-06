@@ -9,3 +9,5 @@
 /config/master.key
 /coverage
 /config/secrets.yml
+# Ignore application configuration
+/config/application.yml

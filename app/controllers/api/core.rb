@@ -35,12 +35,11 @@ module API
     end
 
     mount API::V1::Base
-    add_swagger_documentation \
-      mount_path: "/docs",
-      produces:   "application/vnd.api+json",
-      info:       {
-        title:         "Example VueJS app",
-        contact_email: "lukasz.szmelc@netguru.co"
-      }
+    add_swagger_documentation(
+      api_version: "v1",
+      hide_documentation_path: true,
+      mount_path: "/api/v1/swagger_doc.json",
+      hide_format: true
+    )
   end
 end

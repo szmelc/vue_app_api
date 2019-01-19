@@ -6,7 +6,7 @@ module API
       include API::V1::Defaults
 
       namespace :auth do
-        desc "Return all graduates"
+        desc "Authenticate user"
         params do
           requires :email, type: String, desc: "User's email address"
           requires :password, type: String, desc: "User's password"

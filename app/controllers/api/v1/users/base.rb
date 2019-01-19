@@ -6,6 +6,7 @@ module API
       class Base < Base
         resource :users do
           namespace :me do
+            mount Users::Me::Create
             mount Users::Me::Show
             mount Users::Me::Update
           end
